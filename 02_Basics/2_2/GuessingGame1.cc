@@ -3,28 +3,33 @@
 
 int main()
 {
-    // bool: true/false
-    // [0, 10]
 
-    std::uint32_t number;
-    std::cout << "Please enter your guess: ";
-    std::cin >> number;
+    // 1.Wert einlesen uint16_t
+    //2. liegt der wert zwischen 0 und 10 gib Goal aus
+    //3. liegt die zahl darüber oder darunter gib Finish aus
 
-    if ((number >= 0) && (number <= 10))
-    {
-        if (number == 4)
+    std::uint16_t input_vatiable = 0;
+
+    std::cout << "Geben Sie eine ganze Zahl ein: " << std::endl;
+    std::cin >> input_vatiable;
+
+    if(input_vatiable <= 10)
         {
-            std::cout << "You won!\n";
+            if(input_vatiable == 4)
+                {
+                    std::cout << "GOAL" << std::endl;
+                }
+            else
+                {
+                    std::cout << "LOOSE" << std::endl;
+                }
         }
-        else
-        {
-            std::cout << "You lost!\n";
-        }
-    }
+
+
     else
-    {
-        std::cout << "You entered an invalid number!\n";
-    }
+        {
+            std::cout << "FINISH" << std::endl;
+        }
 
     return 0;
 }
