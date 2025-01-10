@@ -1,14 +1,13 @@
-#include <cstdint> // header for the standart int types like uint8_t ....
-#include <iostream> // header for the in and outpput
-
+#include <cstdint>
+#include <iostream>
 
 int main()
 {
+
     std::uint32_t number;
 
 
-
-    for (std::uint8_t i=0; i <= 3; i++)
+    for (std::uint8_t i =3 ; i >= 3; i--)
     {
         std::cout << "Please enter your guess: ";
 
@@ -21,6 +20,10 @@ int main()
                 std::cout << "YOU WON!" << std::endl;
                 return 0;
             }
+            else if(!(number % 2))
+            {
+                std::cout << "YOU GET a WOODEN PRCE!" << std::endl;
+            }
             else
             {
                 std::cout << "YOU lost!" << std::endl;
@@ -32,5 +35,7 @@ int main()
             std::cout << "You have " << (int)i << "trys remaining!" << std::endl;
         }
     }
+
+
     return 0;
 }
