@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/alexa/Programmieren/UdemyCpp/02_Basics/2_2",
-      "program": "c:/Users/alexa/Programmieren/UdemyCpp/02_Basics/2_2/build/Debug/outDebug",
+      "cwd": "c:/Users/alexa/Programmieren/UdemyCpp/ComputerGame1/_Start",
+      "program": "c:/Users/alexa/Programmieren/UdemyCpp/ComputerGame1/_Start/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

@@ -1,26 +1,29 @@
-#include <cstdint>
 #include <iostream>
+#include <cstdint>
+
+
 
 int main()
 {
-    char LEFT = 'a';
-    char RIGHT = 'd';
+    std::uint8_t move = 0;
 
-    char input;
-    std::cin >> input;
+    for (std::uint8_t i = 0; i < 3; i++)
+    {
+        std::cin >> move;
 
-    if (LEFT == input)
-    {
-        std::cout << "The player moved to the left!\n";
+        if(move == 'a')
+        {
+            std::cout << "The player moves left!";
+        }
+        else if(move == 'd')
+        {
+            std::cout << "The player moves right!";
+        }
+        else
+        {
+            std::cout << "Invalid input!";
+        }
+        std::cout << std::endl;
     }
-    else if (RIGHT == input)
-    {
-        std::cout << "The player moved to the right!\n";
-    }
-    else
-    {
-        std::cout << "Unrecoginzed move!\n";
-    }
-
     return 0;
 }
