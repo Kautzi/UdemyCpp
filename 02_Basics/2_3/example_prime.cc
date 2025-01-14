@@ -8,7 +8,30 @@
 
 int main()
 {
+    std::uint16_t number;
+    std::uint16_t count = 0;
+
+    std::cout << "Ender a positive Integer: ";
+    std::cin >> number;
+    std::cout << std::endl;
 
 
-    return 0;
+    for (std::uint8_t i = 1; i <= number; i++)
+    {
+        if(!(number % i))
+        {
+            count++;
+        }
+    }
+
+    if(count == 2)
+    {
+        std::cout << "You have entered a prime number !";
+    }
+    else
+    {
+        std::cout << "No prime number entered !";
+    }
+
+        return 0;
 }
