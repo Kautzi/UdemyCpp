@@ -3,21 +3,16 @@
 
 int main()
 {
-    std::uint32_t max_number_of_attempts = 3;
+    std::int32_t max_number_of_attempts = 3;
+    std::int32_t current_number_of_attempts = 0;
 
-    std::cout << "Welcome to my Guessing-Game!" << std::endl;
-    std::cout << "You have to guess the correct number between [0, 10]!"
-              << std::endl;
-
-    for (std::uint32_t current_number_of_attempts = 0;
-         current_number_of_attempts < max_number_of_attempts;
-         current_number_of_attempts++)
+    for (; current_number_of_attempts < max_number_of_attempts; current_number_of_attempts++)
     {
-        std::uint32_t number = 0U;
-        std::cout << "Please enter your guess: ";
+        std::uint32_t number = 0;
+        std::cout << "Insert your attempt: ";
         std::cin >> number;
 
-        if ((number >= 0) && (number <= 10))
+        if ( (number <= 10))
         {
             if (number == 4)
             {
@@ -34,9 +29,9 @@ int main()
         }
         else
         {
-            std::cout << "You entered an invalid number!" << std::endl;
+        std::cout << "You entered an invalid number!" << std::endl;
         }
-    }
 
+    }
     return 0;
 }
