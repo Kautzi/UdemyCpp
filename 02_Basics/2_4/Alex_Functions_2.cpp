@@ -19,7 +19,7 @@ std::uint16_t get_int()
 int main()
 {
 
-    std::cout << "Your number is " << std::boolalpha  << is_even(get_int()) << std::endl;
+    std::cout << "Is Even? " << std::boolalpha  << is_even(get_int()) << std::endl;
 
     return 0;
 }
