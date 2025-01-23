@@ -1,5 +1,6 @@
 #include <cstdint>
 #include <iostream>
+#include <concepts>
 
 /**
  * @brief Computes max of a and b
@@ -11,6 +12,9 @@
  */
 
 template <typename T>
+concept Arithmetic = std::is_arithmetic_v<T>;
+
+template <Arithmetic T>
 T max(T a, T b) //to overload a finction the parameter have to be different
 {
     return a > b ? a : b;
@@ -26,8 +30,8 @@ int main()
     double c = -1.34;
     double d = 3.55;
 
-    char e = 'a';
-    char f = 'b';
+    std::string e = "What";
+    std::string f = "Hallp";
 
     std::cout << "The greater double is: " << max(d, c) << '\n';
     std::cout << "The greater int is: " << max(b, a) << '\n';
