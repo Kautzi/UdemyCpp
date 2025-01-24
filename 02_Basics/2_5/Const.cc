@@ -10,7 +10,7 @@ int func(const int val)
 
 int main()
 {
-    int v = 2;
+    int v = 3;
     std::cout << func(v) << '\n';
 
     return 0;
