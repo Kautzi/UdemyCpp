@@ -18,6 +18,6 @@ int main()
     std::cout << func(1) << '\n';
     std::cout << func(2) << '\n';
     std::cout << func(3) << '\n';
-
+   /// std::cout << "Counter: " << counter << "\n"; GEHT nicht da lokale variable!!!!
     return 0;
 }
