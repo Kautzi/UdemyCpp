@@ -8,7 +8,7 @@ int main()
 {
     // C++
     int a = 12;
-    float b = static_cast<float>(a);
+    float b = static_cast<float> ( a);
 
     double c = 12.3;
     float d = static_cast<float>(c);
