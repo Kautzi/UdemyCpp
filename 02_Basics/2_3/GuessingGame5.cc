@@ -6,8 +6,7 @@ int main()
     bool has_won = false;
 
     std::cout << "Welcome to my Guessing-Game!" << std::endl;
-    std::cout << "You have to guess the correct number between [0, 10]!"
-              << std::endl;
+    std::cout << "You have to guess the correct number between [0, 10]!" << std::endl;
 
     do
     {
