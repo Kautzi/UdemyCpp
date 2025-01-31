@@ -8,33 +8,29 @@ int main()
     float vector1[len]{};
     float vector2[len]{};
 
-    for (std::uint32_t i = 0; i < len; ++i)
-    {
-        std::cout << vector1[i] << " ";
-    }
-    std::cout << '\n';
-
-    for (std::uint32_t i = 0; i < len; ++i)
-    {
-        std::cout << vector2[i] << " ";
-    }
-    std::cout << '\n';
-
-    std::cout << "Enter the values for vector 1: \n";
-    for (std::uint32_t i = 0; i < len; ++i)
+    std::cout << "Type the values of the 1 Vector:\n";
+    for (std::uint32_t i = 0; i < len; i++)
     {
         std::cin >> vector1[i];
     }
-
-    std::cout << "Enter the values for vector 2: \n";
-    for (std::uint32_t i = 0; i < len; ++i)
+    std::cout << "Type the values of the 2 Vector:\n";
+    for (std::uint32_t i = 0; i < len; i++)
     {
         std::cin >> vector2[i];
     }
 
-    for (std::uint32_t i = 0; i < len; ++i)
+    //add the two vectors
+
+    float vector_sum[len]{};
+
+    for (std::uint32_t i = 0; i < len; i++)
     {
-        std::cout << "v1[i] + v2[i] = " << vector1[i] + vector2[i] << '\n';
+        vector_sum[i] = vector1[i] + vector2[i];
+    }
+
+    for (std::uint32_t i = 0; i < len; i++)
+    {
+        std::cout << "Vector_sum[" << i << "]= " << vector_sum[i] << std::endl;
     }
 
     return 0;
