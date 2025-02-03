@@ -4,20 +4,27 @@
 // Output the length of the char array (String)
 // The '\0' is not included in the length value
 
-int main()
-{
-    char array1[] = {'A', 'B', 'C', '\0'};
+/**
+ * @brief gets a string as input
+ *
+ * @return returns numbers of characters
+ */
 
-    std::uint32_t len = 0;
-    while (true)
+std::uint16_t count_charcters(const char * my_string)
     {
-        if (array1[len] != '\0')
-            ++len;
-        else
-            break;
+        std::uint16_t count_char = 0;
+        while (my_string[count_char] != '\0')
+        {
+            count_char++;
+        }
+
+        return count_char;
     }
 
-    std::cout << "Length: " << len << '\n';
+int main()
+{
 
+    char my_string[] = "Hallo ich bims!";
+    std::cout << "Length of my_string is = " << count_charcters(my_string);
     return 0;
 }

@@ -1,19 +1,19 @@
+#include <cstdint>
 #include <iostream>
 
 int main()
 {
-    const char first_name[] = {'J', 'a', 'n', '\0'};
-    std::cout << first_name << '\n';
+    char first_name[] = {'J', 'a', 'n', '\0'};
+    std::cout << first_name;
 
-    char last_name[] = "Schaffranek";
-    std::cout << last_name << '\n';
+    const char last_name[] = "Kautz";
+    std::cout << last_name << std::endl;
 
-    last_name[0] = 's';
-
-    for (std::uint32_t i = 0; i < sizeof(last_name) - 1U; ++i)
+    for (std::uint16_t i = 0; i <  sizeof(last_name)-1U; ++i)
     {
-        std::cout << "Char[i] = " << last_name[i] << '\n';
+        std::cout << "last_name[" << i << "] = " << last_name[i] << std::endl;
     }
 
-    return 0;
+
+        return 0;
 }
