@@ -9,7 +9,7 @@ int main()
     const std::int32_t values[]{1, 2, 3};
     std::cout << values << '\n';
 
-    for (std::size_t i = 0; i < 4; i++)
+    for (std::size_t i = 0; i < 3; i++)
     {
         std::cout << values[i] << '\n';
     }
