@@ -3,20 +3,19 @@
 
 int main()
 {
-    auto *p = new std::int32_t{4};
 
-    if (p != nullptr)
+    auto *my_int = new std::int32_t{4};
+    delete my_int;
+    my_int = nullptr;
+
+    if(my_int == nullptr)
     {
-        std::cout << p << '\n';
-        std::cout << *p << '\n';
+        std::cout << "Pointer was deleted!" << std::endl;
     }
     else
     {
-        std::cout << "p does not own the memory!\n";
+        std::cout << *my_int;
     }
-
-    delete p;
-    p = nullptr;
 
     return 0;
 }
