@@ -1,20 +1,24 @@
+#include <array>
 #include <cstdint>
 #include <iostream>
 
-void print_array(const std::int32_t *arr, const std::size_t len)
+
+template <std::size_t N>
+void output_array(const std::array<std::int32_t, N> arr)
 {
-    for (std::size_t i = 0; i < len; i++)
+    for (std::size_t i = 0; i < arr.size(); i++)
     {
         std::cout << arr[i] << '\n';
     }
+    return;
 }
 
 int main()
 {
-    constexpr std::size_t arr_len = 4U;
-    const std::int32_t values[arr_len]{1, 2, 3, 4};
 
-    print_array(values, arr_len);
+    constexpr std::size_t arr_len = 4U;
+    const std::array<std::int32_t, arr_len> arr = {1, 2, 3, 4};
+    output_array(arr);
 
     return 0;
 }
