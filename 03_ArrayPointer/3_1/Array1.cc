@@ -16,7 +16,7 @@ void replace_letter(char *array, char new_letter, char old_letter)
 int main()
 {
     char my_array[] = {"Hallo Wahts up ?"};
-    my_array[0] = 'B';
+    my_array[0] = 'C';
     std::cout << my_array << std::endl;
 
     return 0;
