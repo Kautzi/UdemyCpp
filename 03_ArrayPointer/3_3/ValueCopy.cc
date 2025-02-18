@@ -1,8 +1,8 @@
 #include <iostream>
 
-void f(int v)
+void f(int *v)
 {
-    std::cout << &v << '\n';
+    std::cout << *v << '\n';
 }
 
 int main()
@@ -10,7 +10,7 @@ int main()
     int a = 2;
     std::cout << &a << '\n';
 
-    f(a);
+    f(&a);
 
     return 0;
 }

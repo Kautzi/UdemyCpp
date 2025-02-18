@@ -1,27 +1,25 @@
 #include <iostream>
 
-void f1(int v)
+void f1(int v) //Copy
 {
-    std::cout << "f1: " << v << '\n';
-    std::cout << &v << '\n';
+    std::cout << &v << std::endl;
 }
 
-void f2(int *const v)
+void f2(int *v) //Pointer C approach
 {
-    std::cout << "f2: " << *v << '\n';
-    std::cout << v << '\n';
+    std::cout << v << std::endl;
 }
 
-void f3(int &v)
+void f3(int &v) //Refferenc
 {
-    std::cout << "f3: " << v << '\n';
-    std::cout << &v << '\n';
+    std::cout << v << std::endl;
 }
+
 
 int main()
 {
+
     int a = 2;
-    std::cout << &a << '\n';
 
     f1(a);
     f2(&a);

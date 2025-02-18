@@ -1,45 +1,41 @@
 #include <iostream>
 
-void copy(int v) // copy - Input but modifiable
+
+void copy(int v) //Copy
+{
+    std::cout << "copy(): " << v << std::endl;
+    std::cout << &v << std::endl;
+}
+
+void copy_const(const int v) //Copy
+{
+    std::cout << "copy_const(): " << v << std::endl;
+    std::cout << &v << std::endl;
+}
+
+void reference_in_output(int &v) //Refferenc input and output
 {
     v *= 2;
-    std::cout << "f1: " << v << '\n';
-    std::cout << &v << '\n';
+    std::cout << "reference_in_output(): " << v << std::endl;
+    std::cout << &v << std::endl;
 }
 
-void copy_const(const int v) // const - Input only because of const
+void reference_only_input(const int &v) //Refferenc
 {
-    std::cout << "f1: " << v << '\n';
-    std::cout << &v << '\n';
-}
 
-void reference_input(const int &v) // Input only because of const
-{
-    std::cout << "f3: " << v << '\n';
-    std::cout << &v << '\n';
-}
-
-void reference_in_output(int &v) // Input and Output
-{
-    v = v * 2; // In and Output
-    v = 2;     // Output only
-    std::cout << "f3: " << v << '\n';
-    std::cout << &v << '\n';
+    std::cout << "reference_only_input(): " << v << std::endl;
+    std::cout << &v << std::endl;
 }
 
 int main()
 {
+
     int a = 2;
-    std::cout << a << '\n';
-    std::cout << &a << '\n';
 
     copy(a);
     copy_const(a);
-    reference_input(a);
     reference_in_output(a);
-
-    std::cout << a << '\n';
-    std::cout << &a << '\n';
+    reference_only_input(a);
 
     return 0;
 }
