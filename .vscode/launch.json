@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/alexa/Programmieren/UdemyCpp/tooling/gdbPrettyPrint",
-      "program": "c:/Users/alexa/Programmieren/UdemyCpp/tooling/gdbPrettyPrint/build/Debug/outDebug",
+      "cwd": "c:/Users/alexa/Programmieren/UdemyCpp/03_ArrayPointer/_Exercise3/Exercise",
+      "program": "c:/Users/alexa/Programmieren/UdemyCpp/03_ArrayPointer/_Exercise3/Exercise/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
